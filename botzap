@@ -42,7 +42,7 @@ delete() {
     sleep 2s
     echo "y" | sudo apt-get remove nodejs > /dev/null 2>&1
     sleep 2s
-    sudo apt-get install chromium-browser -Y > /dev/null 2>&1
+    sudo apt-get delete chromium-browser -Y > /dev/null 2>&1
     sleep 3s
     echo ''
     echo -e "${verde}BOT VENDAS REMOVIDO !${tag}"
