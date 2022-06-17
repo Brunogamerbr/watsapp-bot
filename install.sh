@@ -8,7 +8,6 @@ amarelo="\033[1;33m"
 barra="\E[44;1;37m"
 tag_barra="\E[0m"
 tag="\033[0m"
-url='144.217.129.190/key'
 linha="═══════════════════════════════"
 linha+="═════════════════════"
 clear
@@ -21,16 +20,7 @@ echo -ne "${verde}DESEJA INSTALAR O CONJUNTO DE FERRAMENTAS\nPARA O USO DO BOT V
 read resp
 
 [[ "${resp}" = "S" || "${resp}" = "s" ]] && {
-  echo ''
-  echo -ne "${verde}INFORME A LICENÇA:${tag} ";
-  read key
-
-
-[[ $(grep -wc $key <(wget -qO- $url)) == 0 ]] && {
-  sleep 3s
-  echo -e "${red}KEY INVALIDA${tag}"
-  exit 1
-} || {
+  
   sleep 3
   echo ''
   echo -e "${verde}ATUALIZANDO PACOTES...${tag}"
@@ -81,7 +71,9 @@ read resp
   wget 144.217.129.190/botzap > /dev/null 2>&1
   chmod 777 botzap > /dev/null 2>&1
   mv botzap /bin/botzap > /dev/null 2>&1
+} || {
+  exit 1
 }
-}
+
   
   [[ "${resp}" != "N" || "${resp}" != "n" || "${resp}" != "S" || "${resp}" != "s" ]] && exit 1
