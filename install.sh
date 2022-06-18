@@ -24,6 +24,7 @@ read resp
   sleep 3
   echo ''
   echo -e "${verde}ATUALIZANDO PACOTES...${tag}"
+  apt-get update -y > /dev/null 2>&1
   apt-get upgrade -y > /dev/null 2>&1
   sleep 5s
   echo ''
