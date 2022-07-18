@@ -99,7 +99,7 @@ menu() {
  echo -e "${red}[${tag}01${red}]${tag} • ${amarelo}ATIVAR BOT VENDAS${tag}";
  echo -e "${red}[${tag}02${red}]${tag} • ${amarelo}ATUALIZAR BOT VENDAS${tag}"
  echo -e "${red}[${tag}03${red}]${tag} • ${amarelo}REMOVER BOT VENDAS${tag}"
- echo -e "${red}[${tag}04${red}]${tag} • ${amarelo}ENCANEAR QR CODE${tag}"
+ echo -e "${red}[${tag}04${red}]${tag} • ${amarelo}QR CODE${tag}"
  echo -e "${red}[${tag}00${red}]${tag} • ${amarelo}SAIR${tag}\n"
  echo -ne "${verde}INFORME UMA OPÇÃO: ${tag}";
  read resposta
